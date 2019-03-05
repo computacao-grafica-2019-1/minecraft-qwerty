@@ -6,8 +6,6 @@ ha = 150;
 
 
 function setup() {
-  createCanvas(600, 600);
-  background(220);
 }
 //a coordenada x da cabeça é negativa pra desenhar ela no meio da tela
 //o x é a posição x menos metade da largura da cabeça
@@ -69,16 +67,22 @@ function Leg(x, y, w, h){
 }
 
 function keyPressed(arm) {
-  if (keyCode === 38 && arm == "E") {
+  if (keyCode === 69 && arm == "E") {
     return -45;
   }
-  if(keyCode === 40 && arm == "D" ){
+  if(keyCode === 68 && arm == "D" ){
     return -45;
+  }
+  if(keyCode === 32){
+    return 0;
   }
 }
 
 
 function draw() {
+
+  createCanvas(600, 600);
+  background(220);
   //CABEÇA
   push();
   translate(width/2, 100);
